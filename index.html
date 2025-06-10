@@ -1,0 +1,102 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Phone, MapPin, Clock, Sparkles, HelpCircle, Image, Send, MessageCircle, Quote } from "lucide-react";
+
+export default function LimpiezaTotalPage() {
+  return (
+    <div className="bg-white text-gray-900 relative">
+      <header className="bg-blue-600 text-white p-6 text-center">
+        <h1 className="text-3xl font-bold">Limpieza Total Barranquilla</h1>
+        <p className="mt-2">Expertos en limpieza de tapetes, colchones, alfombras y muebles</p>
+      </header>
+
+      <section className="p-6 grid md:grid-cols-3 gap-4">
+        <Card>
+          <CardContent className="p-4">
+            <Sparkles className="text-blue-600 mb-2" size={32} />
+            <h2 className="text-xl font-semibold">Servicios</h2>
+            <ul className="mt-2 list-disc list-inside text-sm">
+              <li>Limpieza y desinfección de colchones</li>
+              <li>Lavado de tapetes y alfombras</li>
+              <li>Lavado de muebles</li>
+              <li>Limpieza de interiores de vehículos</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <Clock className="text-blue-600 mb-2" size={32} />
+            <h2 className="text-xl font-semibold">Horario de Atención</h2>
+            <p className="mt-2 text-sm">Lunes a Sábado: 8:00 am - 6:00 pm</p>
+            <p className="text-sm">Domingos con cita previa</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <Phone className="text-blue-600 mb-2" size={32} />
+            <h2 className="text-xl font-semibold">Contáctanos</h2>
+            <p className="mt-2 text-sm">Teléfono / WhatsApp: +57 300 000 0000</p>
+            <p className="text-sm">Email: limpiezatotalbq@gmail.com</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="bg-blue-50 p-6 text-center">
+        <h2 className="text-2xl font-bold mb-4">¿Por qué elegirnos?</h2>
+        <p className="text-gray-700 max-w-2xl mx-auto">
+          Usamos productos ecológicos y maquinaria profesional. Servicio a domicilio en toda Barranquilla y alrededores. Garantizamos limpieza profunda, eliminación de ácaros y secado rápido.
+        </p>
+        <Button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white">Solicita tu servicio ahora</Button>
+      </section>
+
+      <section className="p-6 bg-white">
+        <h2 className="text-2xl font-bold text-center mb-4">Galería de trabajos</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="bg-gray-100 h-40 flex items-center justify-center"><Image className="text-blue-400" size={48} /></div>
+          <div className="bg-gray-100 h-40 flex items-center justify-center"><Image className="text-blue-400" size={48} /></div>
+          <div className="bg-gray-100 h-40 flex items-center justify-center"><Image className="text-blue-400" size={48} /></div>
+        </div>
+      </section>
+
+      <section className="bg-blue-100 p-6">
+        <h2 className="text-2xl font-bold text-center mb-4">Testimonios de Clientes</h2>
+        <div className="max-w-3xl mx-auto grid gap-4 text-sm">
+          <Card>
+            <CardContent className="p-4">
+              <p className="italic">“Excelente servicio, mi colchón quedó como nuevo. Muy puntuales y profesionales.”</p>
+              <p className="mt-2 text-right font-semibold">– Laura M.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <p className="italic">“Recomiendo 100% Limpieza Total. El sofá quedó impecable y sin olores.”</p>
+              <p className="mt-2 text-right font-semibold">– Andrés P.</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <p className="italic">“Buen precio, excelente atención. Muy satisfecho con el lavado de alfombra.”</p>
+              <p className="mt-2 text-right font-semibold">– Camila G.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <footer className="bg-blue-600 text-white text-center p-4 mt-4">
+        <MapPin className="inline-block mr-2" size={18} /> Barranquilla, Atlántico · © 2025 Limpieza Total
+      </footer>
+
+      <a
+        href="https://wa.me/573000000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center z-50"
+        aria-label="WhatsApp"
+      >
+        <MessageCircle size={28} />
+      </a>
+    </div>
+  );
+}
